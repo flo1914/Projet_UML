@@ -39,7 +39,6 @@ function insertAsk($movie, $lang){
 }
 
 function insertInfo($id, $abrv, $name, $resume){
-	echo "INSERT INTO `informations`(`Nom`, `Resume`, `Genre`, `Type`, `IdProgramme`, `Abrv`) VALUES ('$name', '$resume', null, null, $id, '$abrv')";
 	return execute("INSERT INTO `informations`(`Nom`, `Resume`, `Genre`, `Type`, `IdProgramme`, `Abrv`) VALUES ('$name', '$resume', null, null, $id, '$abrv')");
 }
 
