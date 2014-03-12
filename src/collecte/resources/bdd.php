@@ -38,6 +38,10 @@ function insertAsk($movie, $lang){
 	return execute('INSERT INTO `demander`(`IdProgramme`, `Abrv`) VALUES ('.$movie.',\''.$lang.'\')');
 }
 
+function deleteAsk($movie, $lang){
+	return execute("DELETE FROM `demander` WHERE `IdProgramme`=$movie and `Abrv`='$lang'");
+}
+
 function insertInfo($id, $abrv, $name, $resume){
 	return execute("INSERT INTO `informations`(`Nom`, `Resume`, `Genre`, `Type`, `IdProgramme`, `Abrv`) VALUES ('$name', '$resume', null, null, $id, '$abrv')");
 }
