@@ -1,8 +1,8 @@
 <?php
 	
-	if(isset($_GET['name']) && isset($_GET['resume'])){
+	if(isset($_GET['name']) && isset($_GET['id']) && isset($_GET['lang']) && isset($_GET['resume'])){
 		include "../resources/bdd.php";
-		insertInfo($_GET['numero'], $_GET['lang']);
+		insertInfo($_GET['id'], $_GET['lang'], $_GET['name'], $_GET['resume']);
 	}
 
 ?>

@@ -13,16 +13,15 @@ function load_mdbsearch($lang, $name){
 	return $data;
 }
 
-function load_mdbdata($url, $lang){
+function load_mdbdata($lang, $url){
 	$ch = curl_init();
 	
 	curl_setopt ($ch, CURLOPT_URL, 'http://www.themoviedb.org'.$url.$lang); 
-	// curl_setopt ($ch, CURLOPT_URL, 'file:///C:/wamp/www/the%20imdb%20film%20search/find2.html'); 
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1); 
 	curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 0); 
 	$data = curl_exec($ch); 
 	curl_close($ch); 
-
+	
 	return $data;
 }
 
