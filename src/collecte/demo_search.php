@@ -15,7 +15,7 @@ echo "<br><br>";
 $data = load_mdbdata($answers[0], $_GET['language']);
 $answers = find_mdbdata($data);
 if(isset($answers['overview']))
-	echo $answers['overview']."<br><br>";
+	echo "overview : ".$answers['overview']."<br><br>";
 if(isset($answers['director']))
 	echo "Dirigé par ".$answers['director']."<br>";
 echo "<br>créé par : <br>";

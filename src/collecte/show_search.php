@@ -10,7 +10,7 @@
 		<?php
 		?>
 		
-		<a href="view_results.php?numero=1&lang='EN'"><div>
+		<a href="view_results.php?numero=1&lang=EN"><div>
 			<p>Les cinq Légendes en anglais</p>
 		</div></a>
 	</form>

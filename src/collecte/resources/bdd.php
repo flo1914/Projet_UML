@@ -43,7 +43,7 @@ function getNameFor($numero){
 }
 
 function getLangNameFor($abrv){
-	return query('SELECT `Nom` FROM `langue` WHERE `Abrv`=\''.$abrv.'\'')->fetch()['Nom'];
+	return query("SELECT `Nom` FROM `langue` WHERE `Abrv`='$abrv'")->fetch()['Nom'];
 }
 
 ?>

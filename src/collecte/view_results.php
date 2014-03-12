@@ -16,6 +16,7 @@ $urls=find_mdburl($findSearch);
 foreach($urls as $url){
 	$findData[]=find_mdbdata(load_mdbdata($lang, $url));
 	$fromData[]=find_mdbdata(load_mdbdata('FR', $url));
+	echo find_mdbdata(load_mdbdata($lang, $url))['overview'];
 }
 
 ?>
@@ -45,8 +46,13 @@ foreach($urls as $url){
 	<?php
 		for($i=0; $i<count($findData); $i++)
 			echo "
-				<input type='hidden' id='".($i+1)."n' value='".$findName[$i]."'>
-				<input type='hidden' id='".($i+1)."r' value='"."résumé"."'>";
+				<input type='hidden' id='".($i+1)."n' value='".$findName[$i]."'>";
+			if(isset($findData[$i]['overview']))
+				echo"
+				<input type='hidden' id='".($i+1)."r' value='".$findData[$i]['overview']."'>";
+			else
+				echo"
+				<input type='hidden' id='".($i+1)."r' value='".""."'>";
 				//$findData[$i]['overview']
 	?>
 		
