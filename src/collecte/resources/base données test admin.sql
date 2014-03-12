@@ -31,7 +31,7 @@ INSERT INTO `programme` (`IdProgramme`, `Duree`) VALUES
 (1, 90);
 
 INSERT INTO `informations` (`Nom`, `Resume`, `Genre`, `Type`, `IdProgramme`, `Abrv`) VALUES
-('Les cinqs légendes', 'Les Cinq Légendes raconte l’aventure fantastique d’un groupe de héros, tous doués de pouvoirs extraordinaires. Lorsque Pitch, un esprit maléfique, décide de régner sur le monde, ces 5 légendes vont devoir, pour la première fois, unir leurs forces pour protéger les espoirs, les rêves et l’imagination', NULL, NULL, 1, 'FR');
+('Les cinq légendes', 'Les Cinq Légendes raconte l’aventure fantastique d’un groupe de héros, tous doués de pouvoirs extraordinaires. Lorsque Pitch, un esprit maléfique, décide de régner sur le monde, ces 5 légendes vont devoir, pour la première fois, unir leurs forces pour protéger les espoirs, les rêves et l’imagination', NULL, NULL, 1, 'FR');
 
 INSERT INTO `role` (`Role`, `Nom`, `IdProgramme`, `IdPersonne`, `Abrv`) VALUES
 ('Créateur', NULL, 1, 1, 'FR'),

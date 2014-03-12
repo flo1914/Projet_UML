@@ -38,6 +38,10 @@ function insertAsk($movie, $lang){
 	return execute('INSERT INTO `demander`(`IdProgramme`, `Abrv`) VALUES ('.$movie.',\''.$lang.'\')');
 }
 
+function insertInfo($id, $abrv, $name, $resume){
+	return execute("INSERT INTO `informations`(`Nom`, `Resume`, `Genre`, `Type`, `IdProgramme`, `Abrv`) VALUES ($name, $resume, null, null, $id, $Abrv)");
+}
+
 function getNameFor($numero){
 	return query('SELECT `Nom` FROM `informations` WHERE `IdProgramme`='.$numero.' AND `Abrv`=\'FR\'')->fetch()['Nom'];
 }
