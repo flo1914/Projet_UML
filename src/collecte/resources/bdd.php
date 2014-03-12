@@ -49,5 +49,8 @@ function getNameFor($numero){
 function getLangNameFor($abrv){
 	return query("SELECT `Nom` FROM `langue` WHERE `Abrv`='$abrv'")->fetch()['Nom'];
 }
-
+function getDemandes()
+{
+	return query("SELECT IdProgramme, dem.Abrv AS demAbrv, inf.Nom, inf.Abrv AS infAbrv FROM Demander dem JOIN Informations inf USING ( IdProgramme ) JOIN Langue lan ON lan.Abrv = dem.Abrv");
+}
 ?>
