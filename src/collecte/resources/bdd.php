@@ -51,6 +51,6 @@ function getLangNameFor($abrv){
 }
 function getDemandes()
 {
-	return query("SELECT IdProgramme, dem.Abrv AS demAbrv, inf.Nom, inf.Abrv AS infAbrv FROM Demander dem JOIN Informations inf USING ( IdProgramme ) JOIN Langue lan ON lan.Abrv = dem.Abrv");
+	return query("SELECT IdProgramme, dem.Abrv, inf.Nom FROM Demander dem JOIN Informations inf USING ( IdProgramme ) ");
 }
 ?>
