@@ -12,24 +12,24 @@ CREATE TABLE Programme(
 
 CREATE TABLE Langue(
         Abrv Varchar (3) NOT NULL ,
-        Nom  Varchar (30) ,
+        Nom  Varchar (100) ,
         PRIMARY KEY (Abrv )
 )ENGINE=InnoDB;
 
 
 CREATE TABLE Personne(
         IdPersonne int (11) Auto_increment  NOT NULL ,
-        Nom        Varchar (25) ,
-        Prenom     Varchar (25) ,
+        Nom        Varchar (100) ,
+        Prenom     Varchar (100) ,
         PRIMARY KEY (IdPersonne )
 )ENGINE=InnoDB;
 
 
 CREATE TABLE Informations(
-        Nom         Varchar (25) ,
-        Resume      Varchar (300) ,
-        Genre       Varchar (25) ,
-        Type        Varchar (25) ,
+        Nom         Varchar (100) ,
+        Resume      Varchar (1000) ,
+        Genre       Varchar (100) ,
+        Type        Varchar (100) ,
         IdProgramme Int NOT NULL ,
         Abrv        Varchar (3) NOT NULL ,
         PRIMARY KEY (IdProgramme ,Abrv )
@@ -37,8 +37,8 @@ CREATE TABLE Informations(
 
 
 CREATE TABLE Role(
-        Role        Varchar (25) ,
-        Nom         Varchar (25) ,
+        Role        Varchar (100) ,
+        Nom         Varchar (100) ,
         IdProgramme Int NOT NULL ,
         IdPersonne  Int NOT NULL ,
         Abrv        Varchar (3) NOT NULL ,
@@ -47,7 +47,7 @@ CREATE TABLE Role(
 
 
 CREATE TABLE Pays(
-        Nom         Varchar (25) ,
+        Nom         Varchar (100) ,
         Abrv        Varchar (3) NOT NULL ,
         Abrv_Langue Varchar (3) NOT NULL ,
         PRIMARY KEY (Abrv ,Abrv_Langue )
