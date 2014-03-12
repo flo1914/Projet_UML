@@ -8,11 +8,15 @@
   <body>
 	<form method="GET" action="traitement/create_search.php">
 		<?php
+		$demande=getDemandes();
+		while($ligne=$demande->fetch())
+		{
+		echo $ligne['Abrv'];
+		echo '<a href="view_results.php?numero='.$ligne['IdProgramme'].'&lang='.$ligne['Abrv'].'"><div>';
+		echo '<p>'.$ligne['Nom'].' - '.$ligne['Abrv'].'</p>';
+		echo '</div></a>';
+		}
 		?>
-		
-		<a href="view_results.php?numero=1&lang=EN"><div>
-			<p>Les cinq Légendes en anglais</p>
-		</div></a>
 	</form>
   </body>
   <script>
