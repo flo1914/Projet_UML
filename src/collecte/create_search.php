@@ -1,4 +1,4 @@
-﻿<?php include "resources/listDisplay.php";?>
+﻿<?php include "resources/listDisplay.php"; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,8 +7,7 @@
   </head>
   <body>
 	<form method="GET" action="traitement/create_search.php">
-		langue d'origine :  <select id='from' onchange="setFilmList();"><?php echo display_languages(); ?></select><br>
-		Programme : <select name="numero" id="name"></select><span id="alert_name"></span><br>
+		Programme : <select name="numero" id="name"><?php echo display_namelist('FR'); ?></select><span id="alert_name"></span><br>
 		langue de recherche :   <select name="lang"><?php echo display_languages(); ?></select><span id="alert_lang"></span><br>
 		<input type="submit" value="Chercher" onclick="return test();">
 	</form>
@@ -28,17 +27,5 @@
 		return ok;
 	}
 	
-	function setFilmList(){
-		var xhr = new XMLHttpRequest();
-		
-		xhr.onreadystatechange = function(){
-			if(xhr.readyState == 4 && xhr.status == 200){
-				document.getElementById('name').innerHTML = xhr.responseText;
-			}
-		};
-		
-		xhr.open('GET', 'resources/listDisplay.php?disp=name&lang='+document.getElementById('from').value, true);
-		xhr.send();
-	}
   </script>
 </html>

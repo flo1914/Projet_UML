@@ -1,6 +1,6 @@
 ﻿<?php
 
-include "bdd.php";
+include_once "bdd.php";
 
 if(isset($_GET['disp'])){
 	$disp = $_GET['disp'];

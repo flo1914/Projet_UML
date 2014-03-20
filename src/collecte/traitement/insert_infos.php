@@ -6,4 +6,5 @@
 		deleteAsk($_GET['id'], $_GET['lang']);
 	}
 
+	header('Location: ../show_search.php'); 
 ?>
